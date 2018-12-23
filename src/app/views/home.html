@@ -1,0 +1,45 @@
+<div class="container fade-in">
+    <div class="row">
+        <div class="col-12">
+            <div class="tabela-wrap table-responsive fundo-branco padding-padrao">
+                <tabela-lista-lancamentos info="lancamentos"></tabela-lista-lancamentos>
+            </div>
+        </div>
+    </div><!--/row-->
+    <div class="row">
+        <div class="box col-lg-6 col-12">
+            <div class="numero-destaque-wrap">
+                <h2>Total de lançamentos</h2>
+                <div class="numero-destaque">
+                    {{valorLancamentosTotal | currency}}
+                </div>
+            </div><!--/numero-destaque-wrap-->
+        </div><!--/box-->
+        <div class="box col-lg-6 col-12">
+            <div class="numero-destaque-wrap">
+                <h2>Valor médio diário</h2>
+                <div class="numero-destaque">
+                    {{mediaPorDia | currency}}
+                </div>
+            </div><!--/numero-destaque-wrap-->
+        </div><!--/box-->
+        <div class="box col-lg-4 col-12" ng-controller="LancamentosPorDia">
+            <h2>Lançamentos por dia</h2>
+            <div class="chart-wrap">
+                <canvas height="200" id="pie" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-options="options" chart-colors="colours"></canvas>
+            </div>
+        </div><!--/box-->
+        <div class="box col-lg-4 col-12" ng-controller="SituacaoTotal">
+            <h2>Situação</h2>
+            <div class="chart-wrap">
+                <canvas height="200" id="pie" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-options="options" chart-colors="colours"></canvas>
+            </div>
+        </div><!--/box-->
+        <div class="box col-lg-4 col-12" ng-controller="NomeTipoOperacao">
+            <h2>Descrição</h2>
+            <div class="chart-wrap">
+                <canvas height="200" id="pie" class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-options="options" chart-colors="colours"></canvas>
+            </div>
+        </div><!--/box-->
+    </div><!--/row-->
+</div><!--/container-->

@@ -1,0 +1,79 @@
+// TABELA
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    .tabela-lancamentos {
+        width: 100%;
+        max-width: 100%;
+        min-width: 1000px;
+            th.tablesort-sortable {
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+                cursor: pointer;
+                vertical-align: top;
+            }
+
+            .tablesort-sortable:after{
+                content:"";
+                float:right;
+                margin-top:7px;
+                visibility:hidden;
+                border-left:4px solid transparent;
+                border-right:4px solid transparent;
+
+                border-top:none;
+                border-bottom:7px solid @corPrimaria;
+            }
+
+            .tablesort-desc:after{
+                border-top:7px solid @corPrimaria;
+                border-bottom:none;
+            }
+
+            .tablesort-asc,.tablesort-desc{
+                color: @corPrimaria;
+            }
+
+            .tablesort-asc:after, .tablesort-desc:after {
+                visibility:visible;
+            }
+            .showIfLast {
+                display: none;
+            }
+            .showIfLast:last-child {
+                display: table-row;
+            }
+
+            .showIfLast td {
+                text-align: center;
+            }
+        tr {
+            line-height: 16px;
+            .transition(0.3s);
+        }
+        thead {
+            border-bottom: 1px solid #ddd;
+            th {
+                padding: 10px;
+            }
+        }
+        tbody {
+            td {
+                padding: 10px;
+            }
+            tr:nth-child(odd) {
+                background-color: #f7f7f7;    
+            }
+            tr:hover {
+                background-color: @corPrimaria;
+                color: @corBranco;
+            }
+        }
+    }
+}

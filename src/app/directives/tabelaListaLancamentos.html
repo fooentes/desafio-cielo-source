@@ -1,0 +1,44 @@
+<table class="tabela-lancamentos" ts-wrapper>
+    <thead>
+        <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col" ts-criteria="dataEfetivaLancamento" ts-default="descending">Data do lançamento</th>
+            <th scope="col" ts-criteria="lancamentoContaCorrenteCliente.nomeTipoOperacao">Descrição</th>
+            <th scope="col" ts-criteria="lancamentoContaCorrenteCliente.numeroRemessaBanco">Número</th>
+            <th scope="col" ts-criteria="lancamentoContaCorrenteCliente.nomeSituacaoRemessa">Situação</th>
+            <th scope="col" ts-criteria="dataLancamentoContaCorrenteCliente">Data de confirmação</th>
+            <th scope="col" ts-criteria="nomeBanco">Dados bancários</th>
+            <th scope="col" ts-criteria="valorLancamentoRemessa">Valor final</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="lancamento in lancamentos track by $index" ts-repeat>
+            <td>
+                <a href="#/{{lancamento.lancamentoContaCorrenteCliente.numeroRemessaBanco}}" class="ver-mais">+</a>
+            </td>
+            <td class="data">
+                {{lancamento.dataEfetivaLancamento}}
+            </td>
+            <td class="descricao">
+                {{lancamento.lancamentoContaCorrenteCliente.nomeTipoOperacao}}
+            </td>
+            <td class="numero">
+                {{lancamento.lancamentoContaCorrenteCliente.numeroRemessaBanco}}
+            </td>
+            <td class="situacao">
+                {{lancamento.lancamentoContaCorrenteCliente.nomeSituacaoRemessa}}
+            </td>
+            <td class="data-confirmacao">
+                {{lancamento.dataLancamentoContaCorrenteCliente}}
+            </td>
+            <td class="dados-bancarios">
+                <span class="nomeBanco">{{lancamento.nomeBanco}}</span>
+                <span class="numeroAgencia"><b>Ag: </b> {{lancamento.lancamentoContaCorrenteCliente.dadosDomicilioBancario.numeroAgencia}}</span>
+                <span class="numeroContaCorrente"><b>CC: </b> {{lancamento.lancamentoContaCorrenteCliente.dadosDomicilioBancario.numeroContaCorrente}}</span>
+            </td>
+            <td class="valor">
+                {{lancamento.valorLancamentoRemessa | currency}}
+            </td>
+        </tr>
+    </tbody>
+</table><!--/tabela-lancamentos-->

@@ -1,0 +1,37 @@
+<div class="row fade-in">
+    <div class="box-dados-lancamento-wrap col-lg-6 col-12">
+        <div class="box-dados-lancamento fundo-branco">
+            <h2>Dados do lançamento</h2>
+            <ul class="dados-lancamento-completo">
+                <li><b>Data efetiva do lançamento:</b> {{lancamento.dataEfetivaLancamento}}</li>
+                <li><b>Data do lançamento na conta:</b> {{lancamento.dataLancamentoContaCorrenteCliente}}</li>
+                <li><b>Número do evento:</b> {{lancamento.numeroEvento}}</li>
+                <li><b>Grupo de pagamento:</b> {{lancamento.descricaoGrupoPagamento}}</li>
+                <li><b>Código Identificador Único:</b> {{lancamento.codigoIdentificadorUnico}}</li>
+                <li><b>Nome do banco:</b> {{lancamento.nomeBanco}}</li>
+                <li><b>Quantidade de lançamentos na remessa:</b> {{lancamento.quantidadeLancamentoRemessa}}</li>
+                <li><b>Número raiz do CNPJ:</b> {{lancamento.numeroRaizCNPJ}}</li>
+                <li><b>Número sufixo do CNPJ:</b> {{lancamento.numeroSufixoCNPJ}}</li>
+                <li><b>Valor do lançamento:</b> {{lancamento.valorLancamentoRemessa | currency}}</li>
+            </ul><!--/dados-lancamento-completo-->
+        </div><!--/box-dados-lancamento-->
+    </div><!--/box-dados-lancamento-wrap-->
+    <div class="box-dados-lancamento-wrap col-lg-6 col-12">
+        <div class="box-dados-lancamento fundo-branco">
+            <h2>Lançamento na conta do cliente</h2>
+            <ul class="dados-lancamento-completo">
+                <li><b>Número da remessa:</b> {{lancamento.lancamentoContaCorrenteCliente.numeroRemessaBanco}}</li>
+                <li><b>Situação da remessa:</b> {{lancamento.lancamentoContaCorrenteCliente.nomeSituacaoRemessa}}</li>
+            </ul><!--/dados-lancamento-completo-->
+        </div><!--/box-dados-lancamento-->
+        <div class="box-dados-lancamento fundo-branco">
+            <h2>Dados bancários</h2>
+            <ul class="dados-lancamento-completo">
+                <li><b>Código do banco:</b> {{lancamento.lancamentoContaCorrenteCliente.dadosDomicilioBancario.codigoBanco}}</li>
+                <li><b>Agência:</b> {{lancamento.lancamentoContaCorrenteCliente.dadosDomicilioBancario.numeroAgencia}}</li>
+                <li><b>Conta corrente:</b> {{lancamento.lancamentoContaCorrenteCliente.dadosDomicilioBancario.numeroContaCorrente}}</li>
+                <li><b>Tipo de operacao:</b> {{lancamento.lancamentoContaCorrenteCliente.nomeTipoOperacao}}</li>
+            </ul><!--/dados-lancamento-completo-->
+        </div><!--/box-dados-lancamento-->
+    </div><!--/box-dados-lancamento-wrap-->
+</div><!--/row-->

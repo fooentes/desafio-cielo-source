@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Desafio da Cielo desenvolvido por André Fuentes">
+    <title>Desafio Cielo</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/fonts.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/styles/main.min.css" />
+
+    <!-- Angular -->
+    <script src="assets/scripts/angular.min.js"></script>
+    <script src="assets/scripts/angular-route.min.js"></script>
+    <script src="assets/scripts/angular-locale_pt-br.min.js"></script>
+</head>
+
+<body class="cielo-app" ng-app="cieloApp">
+
+    <!-- Cabeçalho -->
+    <header class="header slide-in-from-top">
+        <div class="container">
+            <nav class="navbar">
+                <a class="navbar-brand" href="#">
+                    <h1>Desafio Cielo</h1>
+                    <img class="logo-cielo" src="assets/images/branding/logo-cielo.svg" alt="">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Corpo -->
+    <div ng-view></div>
+
+    <!-- Rodapé -->
+    <footer>
+        Desenvolvido por <a href="http://www.andrefuentes.com.br" target="_blank">André Fuentes</a>
+    </footer>
+
+    <!-- Módulos -->
+    <script src="app/app.js"></script>
+    <!-- Controladores -->
+    <script src="app/controllers/MainController.js"></script>
+    <script src="app/controllers/ChartController.js"></script>
+    <script src="app/controllers/LancamentoIndividualController.js"></script>
+    <!-- Serviços -->
+    <script src="app/services/lancamentos.js"></script>
+    <!-- Diretivas -->
+    <script src="app/directives/tabelaListaLancamentos.js"></script>
+    <script src="app/directives/lancamentoIndividualCompleto.js"></script>
+    <!-- Libraries -->
+    <script src="assets/scripts/Chart.min.js"></script>
+    <script src="assets/scripts/ui-bootstrap-tpls.min.js"></script>
+    <script src="assets/scripts/angular-chart.min.js"></script>
+    <script src="assets/scripts/angular-tablesort.min.js"></script>
+</body>
+
+</html>
