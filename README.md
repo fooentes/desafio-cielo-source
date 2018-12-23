@@ -14,7 +14,7 @@ Para desenvolver o desafio proposto foi usada a biblioteca do AngularJS v1.7.5, 
 
 ---
 
-###### O app funciona da seguinte maneira
+#### O app funciona da seguinte maneira
 
 1. O json é carregado por um serviço angular em *"app/services/lancamentos.js"*;
 
@@ -38,6 +38,6 @@ Para desenvolver o desafio proposto foi usada a biblioteca do AngularJS v1.7.5, 
 
 ---
 
-##### Demonstração
+#### Demonstração
 
 [www.andrefuentes.com.br/desafio-cielo](http://www.andrefuentes.com.br/desafio-cielo)
